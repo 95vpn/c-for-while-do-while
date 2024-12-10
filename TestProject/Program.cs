@@ -143,6 +143,7 @@ validNumber = int.TryParse(readResult, out numericValue);
 Console.WriteLine(validNumber);
 */   
 
+/*
 string? readResult;
 int numero = 0;
 bool validEntry = false;
@@ -172,7 +173,67 @@ do
     }
 
 } while (validEntry == false);
+*/
+
+/*
+string? readResult;
+bool validEntry = false;
+Console.WriteLine("Escriba su rol: (Administrador, Gerente, Usuario)");
+
+do
+{
+    readResult = Console.ReadLine()?.Trim().ToLower();
+    if (readResult == "administrador" || readResult == "gerente" || readResult == "usuario")
+    {
+        Console.WriteLine($"tu entrada ({readResult}) ha sido aceptada");
+        validEntry = true;
+    }
+    else 
+    {
+        Console.WriteLine("entrada invalida escriba su rol: (Administrador, Gerente, Usuario)");
+    }
 
 
+}while(validEntry == false);
+*/
 
+/*
+string[] myStrings = new string[2] { " I like pizza. I like roast chicken. I like salad", " I like all three of the menu choices" };
+int periodLocation = 0;
+string myString = "";
 
+for (int i = 0; i <= myStrings.Length -1; i++)
+{
+    myString = myStrings[i];
+    periodLocation = myString.IndexOf(".");
+
+    string oracion;
+    
+    while(periodLocation != -1)
+    {
+        oracion = myString.Remove(periodLocation);
+        myString = myString.Substring(periodLocation + 1);
+        myString = myString.TrimStart();
+        periodLocation = myString.IndexOf(".");
+        Console.WriteLine(oracion);
+        
+    } 
+    oracion = myString.Trim();
+    Console.WriteLine(oracion);
+}
+*/
+
+string [] info = { "Name: Felica Walker", "Title: Mz.", 
+                   "Age: 47", "Location: Paris", "Gender: F"};
+int found = 0;
+
+Console.WriteLine("The initial values in the array are:");
+foreach (string s in info)
+    Console.WriteLine(s);
+
+Console.WriteLine("\nWe want to retrieve only the key information. That is:");        
+foreach (string s in info) 
+{
+    found = s.IndexOf(": ");
+    Console.WriteLine("   {0}", s.Substring(found + 2));
+}
