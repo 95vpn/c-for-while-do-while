@@ -10,3 +10,12 @@ La declaración do-while ejecuta condicionalmente su cuerpo una o más veces.
 
 ### while
 La declaración while ejecuta condicionalmente su cuerpo cero o más veces.
+
+## Métodos
+- **IndexOf():** retorna el primer índice que se puede encontrar un elemento dado en el array o retorna -1 si el elemento no está presente.
+
+- **Substring(): **extrae caracteres de la cadena.
+
+- **TrimStart():** quita los espacios al empezar la cadena.
+
+- **Trim(): **quita los espacios en blanco en ambos extremos de la cadena.
